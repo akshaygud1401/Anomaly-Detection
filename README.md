@@ -50,7 +50,7 @@ From the provided networks, the following 9 features were extracted:
    * Local: measures node attributes across a specific graph, and can indicate anomalous behavior if very high
      * *std_local_source_degrees*
 
-The engineered features were able to produce a ROC-AUC of nearly 0.99, and hasa improved F1 score from the baseline statistical model by 0.15
+The engineered features were able to produce a ROC-AUC of 0.99, and hasa improved F1 score from the baseline statistical model by 0.3
 
 
 ## Model Selection
@@ -59,10 +59,10 @@ Models performance was measured using ROC AUC because we are doing a binary clas
 ```json
 {
     learning_rate: 0.1,
-    max_iter: 99, 
-    max_leaf_nodes: 14, 
-    max_depth: 9, 
-    l2_regularization: 8.14695639097796,
+    max_iter: 60,
+    max_leaf_nodes: 16,
+    max_depth: 9,
+    l2_regularization: 0.5451546397377538
     class_weight: 'balanced'
 }
 ```
@@ -71,7 +71,7 @@ Models performance was measured using ROC AUC because we are doing a binary clas
 
 ![PR curve](assets/pr_curve.png)
 
-The HGBT model performs well, achieving ROC AUC and PR scores >0.97
+The HGBT model performs well, achieving ROC AUC and PR scores > 0.98
 
 ### Model Explainability
 
@@ -85,13 +85,13 @@ Determining the achieved business metrics can be done by first setting the model
 
 ![Threshold](assets/thresholds.png)
 
-From the threshold analysis, we can see that F1 is the highest at the threshold of 0.33, and the maximum F1 score is 0.927
+From the threshold analysis, we can see that F1 is the highest at the threshold of 0.59, and the maximum F1 score is 0.926
 
-| Threshold  | 0.33 |
+| Threshold  | 0.59 |
 |------------|------|
-| Precision  | 0.927|
-| Recall     | 0.927|
-| F1 Score   | 0.927|
+| Precision  | 0.967|
+| Recall     | 0.889|
+| F1 Score   | 0.926|
 
 
 
