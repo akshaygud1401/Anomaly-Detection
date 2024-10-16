@@ -10,7 +10,7 @@ Distributed micro-services based applications are typically accessed via APIs. T
 
 The main objective of this project is:
 
-> **To develop a system that will be able to detect anomalous behaviour from the API calls**
+> **To develop a system that will be able to detect anomalous behavior from the API calls**
 
 To achieve this objective, it was further broken down into the following 5 technical sub-objectives:
 
