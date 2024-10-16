@@ -4,7 +4,7 @@
 
 The datasets were found on [Kaggle](https://www.kaggle.com/datasets/tangodelta/api-access-behaviour-anomaly-dataset/data). The tabular dataset (supervised_dataset.csv) and the graph dataset (supervised_call_graphs.json) were used for this project. (licensed under GPL-2).
 
-Distributed micro-services based applications are typically accessed via APIs. The authors of this dataset have collected sequences of API calls from an application or accessed programmatic means and put them into a graph format. For this graph, they've generated common API access patterns (i.e. sequences of API calls) and have calculated user access metrics that can be used to classify these behaviors. They have also manually labelled a set of these behavior patters (our training set) and have provided the remaining sequences for us to classify.
+Distributed micro-services based applications are typically accessed via APIs. The authors of this dataset have collected sequences of API calls from an application or accessed programmatic means and put them into a graph format. For this graph, they've generated common API access patterns (i.e. sequences of API calls) and have calculated user access metrics that can be used to classify these behaviors. They have also manually labeled a set of these behavior patters.
 
 ## Objectives
 
@@ -14,9 +14,9 @@ The main objective of this project is:
 
 To achieve this objective, it was further broken down into the following 5 technical sub-objectives:
 
-1. To perform in-depth exploratory data analysis of the both datasets (tabular and graph)
+1. To perform in-depth exploratory data analysis of both datasets (tabular and graph)
 2. To engineer new predictive features from the available graphs
-3. To develop a supervised model solely from the engineered features to classify behaviour into normal and anomalous
+3. To develop a supervised model solely from the engineered features to classify behavior into normal and anomalous
 4. To recommend a threshold that will maximize model performance in terms of F1 score
 5. To create an API endpoint for the trained model and deploy it
 6. To test the performance of the API endpoint once deployed
@@ -106,7 +106,7 @@ Clone the repository and go to the folder with the Dockerfile. Then run the foll
 docker build -t prediction-app:latest .
 ```
 
-To check if the image was created successfully, run `docker images` in you CLI and you should see `prediction-app` listed.
+To check if the image was created successfully, run `docker images` in your CLI and you should see `prediction-app` listed.
 
 ### Step 2: Send the Request
 
@@ -116,7 +116,7 @@ To test if the API is working, you can run the the following command.
 docker run -it --rm -p 8989:8989 prediction-app:latest
 ```
 
-The `-it` flag makes the Docker image run in an interactive mode, so you will be able to see code logs in the shell. Type Ctrl+C to stop running if you see an error. The `--rm` flag removes the container once you stop running it, and is useful if you want this to be a temporary ccontainer. `p 8989:8989` maps the port 8989 on your local machine to the container's port 8989. This will make your endpoint available at your local host at port 8989 (ie. http://0.0.0.0:8989).
+The `-it` flag makes the Docker image run in an interactive mode, so you will be able to see code logs in the shell. Type Ctrl+C to stop running if you see an error. The `--rm` flag removes the container once you stop running it, and is useful if you want this to be a temporary container. `-p 8989:8989` maps the port 8989 on your local machine to the container's port 8989. This will make your endpoint available at your local host at port 8989 (ie. http://0.0.0.0:8989).
 
 ### Testing
 
