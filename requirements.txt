@@ -1,0 +1,11 @@
+pandas
+polars
+plotly
+numpy
+mlflow
+optuna
+optuna-integration
+scikit-learn
+flask
+joblib
+gunicorn
