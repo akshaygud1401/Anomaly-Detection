@@ -5,7 +5,7 @@ numpy
 mlflow
 optuna
 optuna-integration
-scikit-learn==1.5.2
+scikit-learn==1.5.1
 flask
 joblib
 gunicorn
