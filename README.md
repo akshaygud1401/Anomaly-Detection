@@ -103,7 +103,7 @@ pip install docker
 Clone the repository and go to the folder with the Dockerfile. Then run the following command to build the image.
 
 ```shell
-docker build -t prediction-app:latest .
+docker build -t prediction-app .
 ```
 
 To check if the image was created successfully, run `docker images` in your CLI and you should see `prediction-app` listed.
@@ -113,7 +113,7 @@ To check if the image was created successfully, run `docker images` in your CLI 
 To test if the API is working, you can run the the following command. 
 
 ```shell
-docker run -it --rm -p 8989:8989 prediction-app:latest
+docker run -it --rm -p 8989:8989 prediction-app
 ```
 
 The `-it` flag makes the Docker image run in an interactive mode, so you will be able to see code logs in the shell. Type Ctrl+C to stop running if you see an error. The `--rm` flag removes the container once you stop running it, and is useful if you want this to be a temporary container. `-p 8989:8989` maps the port 8989 on your local machine to the container's port 8989. This will make your endpoint available at your local host at port 8989 (ie. http://0.0.0.0:8989).
