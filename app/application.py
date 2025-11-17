@@ -5,7 +5,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-model = joblib.load('../app/bestHGBT.joblib')
+model = joblib.load('../app/best_hgbt.joblib')
 
 @app.route('/', methods=['GET', 'POST'])
 def predict():

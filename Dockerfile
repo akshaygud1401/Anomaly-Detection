@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FROM python:3.11-slim
 
 # WORKDIR /app
@@ -12,6 +13,9 @@
 # ENTRYPOINT [ "gunicorn", "-b", "0.0.0.0:8989", "application:app"]
 
 FROM --platform=linux/amd64 python:3.11-slim AS builder
+=======
+FROM python:3.13-slim
+>>>>>>> 073f34a (update versions)
 
 WORKDIR /app
 
